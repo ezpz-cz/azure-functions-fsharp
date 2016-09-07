@@ -1,7 +1,9 @@
+#if !COMPILED
 #r "c:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.0.0\System.Net.Primitives.dll"
 #r "c:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.0.0\System.Net.Http.dll"
 #r "c:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.0.0\System.Threading.Tasks.dll"
 #r "c:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.0.0\System.Text.Encoding.dll"
+#endif
 
 open System
 open System.Net
