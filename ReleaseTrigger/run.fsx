@@ -1,4 +1,8 @@
 open System
 
-let Run (req: HttpRequestMessage, log: TraceWriter) =
-    log.Info(sprintf "F# Queue trigger function processed: '%s'" input)
+let Run (req: HttpRequestMessage, log: TraceWriter) = async {
+    let! content = req.Content.AsyncReadAsString()
+    return req HttpStatusCode.OK
+           <| ``Content-Type`` "text/plain"
+           <| new StringContent(content)
+}
