@@ -1,5 +1,5 @@
 open System
-open System.Net
+open System.Web.Http
 
 let Run (req: HttpRequestMessage, log: TraceWriter) = async {
     let! content = req.Content.AsyncReadAsString()
