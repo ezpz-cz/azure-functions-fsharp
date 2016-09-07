@@ -16,7 +16,5 @@ open FSharp.Data
 
 let Run (req: HttpRequestMessage) = async {
     let! content = req.Content.ReadAsStringAsync() |> Async.AwaitTask
-    let response = new HttpResponseMessage(HttpStatusCode.OK)
-    response.Content <- new StringContent(content)
-    return response
+    return content
 }
